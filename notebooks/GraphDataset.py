@@ -124,7 +124,7 @@ class GraphDataset(Dataset):
 
     def get(self, idx):
         p = osp.join(self.processed_dir, self.processed_file_names[idx])
-        data = torch.load(p)
+        data = torch.load(p, weights_only=False))
         return data
 
 
